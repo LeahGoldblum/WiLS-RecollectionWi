@@ -1,0 +1,69 @@
+name: Deploy GitHub Pages (3 prototypes)
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Build all prototypes
+        run: |
+          set -euo pipefail
+          REPO_NAME="${GITHUB_REPOSITORY#*/}"
+
+          rm -rf site
+          mkdir -p site
+
+          cp -R pages/* site/
+
+          build_one () {
+            local dir="$1"
+            local subpath="$2"
+            pushd "$dir" >/dev/null
+            npm install --no-fund --no-audit
+            BASE_PATH="/${REPO_NAME}/${subpath}/" npm run build
+            popd >/dev/null
+
+            mkdir -p "site/${subpath}"
+            cp -R "${dir}/build"/* "site/${subpath}/"
+          }
+
+          build_one tree tree
+          build_one interactive interactive
+          build_one everyone everyone
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
