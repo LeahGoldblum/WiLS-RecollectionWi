@@ -1,16 +1,23 @@
-# WiLS / Recollection Wisconsin – User Flow Prototypes
+# WiLS / Recollection Wisconsin — User Flow Prototypes
 
-This repo hosts **three** separate Vite/React prototypes on **GitHub Pages**:
+This repository contains **three interactive user-flow prototypes** (built with Vite/React) and published via **GitHub Pages**.
 
-- `/tree/` – Tree User Flow
-- `/interactive/` – Interactive User Flow
-- `/everyone/` – User Flow for Everyone
+## View the prototypes (no coding needed)
 
-After GitHub Pages is enabled and the workflow has run, your links will look like:
+- **Start page (hub):** https://leahgoldblum.github.io/WiLS-RecollectionWi/
+- **Tree User Flow:** https://leahgoldblum.github.io/WiLS-RecollectionWi/tree/
+- **Interactive User Flow:** https://leahgoldblum.github.io/WiLS-RecollectionWi/interactive/
+- **User Flow for Everyone:** https://leahgoldblum.github.io/WiLS-RecollectionWi/everyone/
 
-- `https://<your-username>.github.io/<repo-name>/`
-- `https://<your-username>.github.io/<repo-name>/tree/`
-- `https://<your-username>.github.io/<repo-name>/interactive/`
-- `https://<your-username>.github.io/<repo-name>/everyone/`
+## What’s in this repo
 
-The GitHub Action `.github/workflows/deploy-pages.yml` builds each app and deploys everything as one static site.
+- `/pages/` – Landing page that links to each prototype
+- `/tree/` – Tree User Flow prototype
+- `/interactive/` – Interactive User Flow prototype
+- `/everyone/` – User Flow for Everyone prototype
+
+## How it’s deployed
+
+A GitHub Actions workflow (`.github/workflows/deploy-pages.yml`) builds each prototype and deploys them together as a single GitHub Pages site.
+
+If you don’t see the latest version yet, refresh after a minute or two while the GitHub Pages workflow finishes running.
