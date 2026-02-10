@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WiLS / Recollection Wisconsin – User Flow Prototypes</title>
+    <style>
+      :root { --bg: #0b0b10; --card: #151522; --text: #f2f2f7; --muted:#b6b6c5; --link:#8fd3ff; }
+      @media (prefers-color-scheme: light) {
+        :root { --bg:#ffffff; --card:#f4f5f7; --text:#0b0b10; --muted:#4b5563; --link:#005fcc; }
+      }
+      body { background: var(--bg); color: var(--text); font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 48px 20px; }
+      .wrap { max-width: 980px; margin: 0 auto; }
+      h1 { font-size: 28px; margin: 0 0 10px; }
+      p { color: var(--muted); margin: 0 0 18px; }
+      .grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); margin-top: 18px; }
+      a.card { display: block; background: var(--card); border-radius: 16px; padding: 18px 18px 16px; text-decoration: none; color: var(--text); border: 1px solid rgba(255,255,255,0.08); }
+      a.card:hover { border-color: rgba(143,211,255,0.6); }
+      .title { font-weight: 700; margin-bottom: 6px; }
+      .desc { color: var(--muted); font-size: 14px; }
+      .foot { margin-top: 28px; font-size: 12px; color: var(--muted); }
+      .foot a { color: var(--link); }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <h1>WiLS / Recollection Wisconsin – User Flow Prototypes</h1>
+      <p>Select a prototype below. Each link opens a separate hosted build.</p>
+
+      <div class="grid">
+        <a class="card" href="./tree/">
+          <div class="title">Tree User Flow</div>
+          <div class="desc">A tree-style flow for exploring paths and decisions.</div>
+        </a>
+        <a class="card" href="./interactive/">
+          <div class="title">Interactive User Flow</div>
+          <div class="desc">Interactive flow prototype for click-through exploration.</div>
+        </a>
+        <a class="card" href="./everyone/">
+          <div class="title">User Flow for Everyone</div>
+          <div class="desc">A version designed for broader audiences / stakeholders.</div>
+        </a>
+      </div>
+
+      <div class="foot">
+        Tip: If something loads with missing styles, it usually means the GitHub Pages “base path” wasn’t set correctly during build.
+      </div>
+    </div>
+  </body>
+</html>
