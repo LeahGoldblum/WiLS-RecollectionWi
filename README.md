@@ -8,9 +8,17 @@ This repository contains interactive user-flow prototypes and homepage wireframe
 - **Tree User Flow:** https://leahgoldblum.github.io/WiLS-RecollectionWi/tree/
 - **Interactive User Flow:** https://leahgoldblum.github.io/WiLS-RecollectionWi/interactive/
 - **User Flow for Everyone:** https://leahgoldblum.github.io/WiLS-RecollectionWi/everyone/
+
+### Homepage Wireframes
+
 - **Low-Fidelity Homepage Wireframe (V1):** https://leahgoldblum.github.io/WiLS-RecollectionWi/wireframe-lowfi/
 - **Intent-Driven Homepage Wireframe (V1):** https://leahgoldblum.github.io/WiLS-RecollectionWi/wireframe-intent/
 - **Final Low-Fidelity Homepage Wireframe (V2):** https://leahgoldblum.github.io/WiLS-RecollectionWi/wireframe-final-v2/
+
+### Lo-Fi Wireframes by User Type
+
+- **Contributor Pathway (Lo-Fi):** https://leahgoldblum.github.io/WiLS-RecollectionWi/contributor-pathway-lowfi/  
+  *Note: Click through the two contributor pathway screens to follow the pathway.*
 
 ## What’s in this repo
 
@@ -21,6 +29,7 @@ This repository contains interactive user-flow prototypes and homepage wireframe
 - `/wireframe-lowfi/` – Initial low-fidelity homepage wireframe
 - `/wireframe-intent/` – Intent-driven homepage wireframe (V1)
 - `/wireframe-final-v2/` – Final low-fidelity homepage wireframe (V2), selected direction based on stakeholder feedback
+- `/contributor-pathway-lowfi/` – Built-out contributor pathway in low-fi (Vite). Click through the two contributor pathway screens to follow the pathway.
 
 ## Current Selected Direction
 
