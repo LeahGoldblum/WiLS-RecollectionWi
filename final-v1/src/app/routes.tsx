@@ -77,4 +77,4 @@ export const router = createBrowserRouter([
       { path: 'educators/resource-set/:id', Component: EducatorResourceSetDetail },
     ],
   },
-]);
+], { basename: import.meta.env.BASE_URL });

@@ -8,13 +8,13 @@ import { ContributorFAQ } from './pages/ContributorFAQ';
 import { Resources } from './pages/Resources';
 import { GetStarted } from './pages/GetStarted';
 import { Confirmation } from './pages/Confirmation';
-import { EducatorHub } from './pages/EducatorHub';
-import { MapExplorer } from './pages/MapExplorer';
-import { OnlineExhibits } from './pages/OnlineExhibits';
-import { SearchStarters } from './pages/SearchStarters';
-import { QuickFind } from './pages/QuickFind';
-import { GenealogistHub } from './pages/GenealogistHub';
-import { GenealogistSearch } from './pages/GenealogistSearch';
+import { EducatorsHub } from './pages/EducatorsHub';
+import { EducatorsMap } from './pages/EducatorsMap';
+import { EducatorsExhibits } from './pages/EducatorsExhibits';
+import { EducatorsSearchStarters } from './pages/EducatorsSearchStarters';
+import { EducatorsQuickFind } from './pages/EducatorsQuickFind';
+import { GenealogistsHub } from './pages/GenealogistsHub';
+import { GenealogistsSearch } from './pages/GenealogistsSearch';
 
 export const router = createBrowserRouter([
   {
@@ -22,7 +22,6 @@ export const router = createBrowserRouter([
     Component: Layout,
     children: [
       { index: true, Component: Home },
-      // Contributor / Organizations
       { path: 'organizations', Component: OrganizationsHub },
       { path: 'organizations/hosting', Component: Hosting },
       { path: 'organizations/harvesting', Component: Harvesting },
@@ -30,15 +29,13 @@ export const router = createBrowserRouter([
       { path: 'organizations/resources', Component: Resources },
       { path: 'organizations/get-started', Component: GetStarted },
       { path: 'organizations/confirmation', Component: Confirmation },
-      // Educators
-      { path: 'educators', Component: EducatorHub },
-      { path: 'educators/map', Component: MapExplorer },
-      { path: 'educators/exhibits', Component: OnlineExhibits },
-      { path: 'educators/search-starters', Component: SearchStarters },
-      { path: 'educators/quick-find', Component: QuickFind },
-      // Genealogists
-      { path: 'genealogists', Component: GenealogistHub },
-      { path: 'genealogists/search', Component: GenealogistSearch },
+      { path: 'educators', Component: EducatorsHub },
+      { path: 'educators/map', Component: EducatorsMap },
+      { path: 'educators/exhibits', Component: EducatorsExhibits },
+      { path: 'educators/search-starters', Component: EducatorsSearchStarters },
+      { path: 'educators/quick-find', Component: EducatorsQuickFind },
+      { path: 'genealogists', Component: GenealogistsHub },
+      { path: 'genealogists/search', Component: GenealogistsSearch },
     ],
   },
 ], { basename: import.meta.env.BASE_URL });
