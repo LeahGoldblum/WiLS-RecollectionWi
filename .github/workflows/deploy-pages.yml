@@ -26,7 +26,7 @@ jobs:
         with:
           node-version: 20
 
-      - name: Build all prototypes
+      - name: Build and collect site
         run: |
           set -euo pipefail
           REPO_NAME="${GITHUB_REPOSITORY#*/}"
@@ -37,7 +37,7 @@ jobs:
           # Copy hub/landing pages
           cp -R pages/* site/
 
-          # For projects that output to ./build
+          # For projects that build to ./build
           build_one () {
             local dir="$1"
             local subpath="$2"
@@ -50,7 +50,7 @@ jobs:
             cp -R "${dir}/build"/* "site/${subpath}/"
           }
 
-          # For Vite projects that output to ./dist
+          # For Vite projects that can actually rebuild to ./dist
           build_one_vite () {
             local dir="$1"
             local subpath="$2"
@@ -63,7 +63,15 @@ jobs:
             cp -R "${dir}/dist"/* "site/${subpath}/"
           }
 
-          # Existing build/ folder projects
+          # For folders where dist is already correct and should just be copied
+          copy_dist () {
+            local dir="$1"
+            local subpath="$2"
+            mkdir -p "site/${subpath}"
+            cp -R "${dir}/dist"/* "site/${subpath}/"
+          }
+
+          # Existing build/ projects
           build_one tree tree
           build_one interactive interactive
           build_one everyone everyone
@@ -71,12 +79,14 @@ jobs:
           build_one wireframe-intent wireframe-intent
           build_one wireframe-final-v2 wireframe-final-v2
 
-          # Existing and new Vite/dist projects
+          # Existing Vite project that can rebuild
           build_one_vite contributor-pathway-lowfi contributor-pathway-lowfi
-          build_one_vite educator-path-1 educator-path-1
-          build_one_vite educator-path-2 educator-path-2
-          build_one_vite final-v1 final-v1
-          
+
+          # These should be copied from checked-in dist
+          copy_dist educator-path-1 educator-path-1
+          copy_dist educator-path-2 educator-path-2
+          copy_dist final-v1 final-v1
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
