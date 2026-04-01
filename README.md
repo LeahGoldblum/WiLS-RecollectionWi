@@ -1,67 +1,79 @@
-# WiLS / Recollection Wisconsin — UX Prototypes & Wireframes
+# WiLS / Recollection Wisconsin — UX Process, Prototypes & Design Evolution
 
-This repository contains interactive user-flow prototypes and homepage wireframe explorations (built with Vite/React), published together via GitHub Pages for stakeholder review.
+This repository contains the design process materials created for the LIS 640 Industry-Led Capstone project with WiLS for Recollection Wisconsin. Rather than showing only final outputs, this repository is intended to document the project story from research and user-flow exploration through low-fidelity homepage and pathway wireframes, leading into the current final design direction.
 
-## View the project site (no coding needed)
+## View the Project Site
 
 - **Project Hub (Start Page):** https://leahgoldblum.github.io/WiLS-RecollectionWi/
 - **Tree User Flow:** https://leahgoldblum.github.io/WiLS-RecollectionWi/tree/
 - **Interactive User Flow:** https://leahgoldblum.github.io/WiLS-RecollectionWi/interactive/
 - **User Flow for Everyone:** https://leahgoldblum.github.io/WiLS-RecollectionWi/everyone/
 
-### Homepage Wireframes
+## Homepage Wireframes
 
 - **Low-Fidelity Homepage Wireframe (V1):** https://leahgoldblum.github.io/WiLS-RecollectionWi/wireframe-lowfi/
 - **Intent-Driven Homepage Wireframe (V1):** https://leahgoldblum.github.io/WiLS-RecollectionWi/wireframe-intent/
 - **Final Low-Fidelity Homepage Wireframe (V2):** https://leahgoldblum.github.io/WiLS-RecollectionWi/wireframe-final-v2/
 
-### Lo-Fi Wireframes by User Type
+## Lo-Fi Wireframes by User Type
 
 - **Contributor Pathway (Lo-Fi):** https://leahgoldblum.github.io/WiLS-RecollectionWi/contributor-pathway-lowfi/  
-  *Note: Click through the two contributor pathway screens to follow the pathway.*
+  *Built-out contributor pathway in low fidelity. Click through the contributor screens to follow the user journey.*
 
-## What’s in this repo
+- **Educator Path 1:** https://leahgoldblum.github.io/WiLS-RecollectionWi/educator-path-1/  
+  *First educator-focused low-fidelity pathway exploration.*
 
-- `/pages/` – Landing page that links to research artifacts, user flows, and wireframes
+- **Educator Path 2:** https://leahgoldblum.github.io/WiLS-RecollectionWi/educator-path-2/  
+  *Second educator-focused low-fidelity pathway exploration for comparison and refinement.*
+
+## Final Design Direction
+
+- **Final Version 1:** https://leahgoldblum.github.io/WiLS-RecollectionWi/final-v1/  
+  *Current visual design direction following the latest stakeholder discussion and the main version for feedback at this stage.*
+
+## What’s in This Repo
+
+- `/pages/` – Landing page linking to research artifacts, user flows, wireframes, and the current final design direction
 - `/tree/` – Tree User Flow prototype
 - `/interactive/` – Interactive User Flow prototype
 - `/everyone/` – User Flow for Everyone prototype
 - `/wireframe-lowfi/` – Initial low-fidelity homepage wireframe
 - `/wireframe-intent/` – Intent-driven homepage wireframe (V1)
-- `/wireframe-final-v2/` – Final low-fidelity homepage wireframe (V2), selected direction based on stakeholder feedback
-- `/contributor-pathway-lowfi/` – Built-out contributor pathway in low-fi (Vite). Click through the two contributor pathway screens to follow the pathway.
+- `/wireframe-final-v2/` – Refined low-fidelity homepage wireframe (V2)
+- `/contributor-pathway-lowfi/` – Low-fidelity contributor pathway
+- `/educator-path-1/` – First educator low-fidelity pathway
+- `/educator-path-2/` – Second educator low-fidelity pathway
+- `/final-v1/` – Current final design direction for stakeholder review
 
-## Current Selected Direction
+## Current Review Focus
 
-The current preferred homepage wireframe direction is:
+The primary review item at this stage is:
 
-✅ **Final Low-Fidelity Homepage Wireframe (V2)**
+✅ **Final Version 1**
 
-This version builds on the intent-driven concept and reflects stakeholder feedback, including:
-- clearer contributor-focused language
-- improved pathway framing
-- updated terminology for contributor resources
-- a cleaner client-facing wireframe presentation
+This version reflects the current visual direction following the latest stakeholder discussion and is the main version for feedback before the next round of refinement.
 
-## Research Artifacts (linked from the project hub)
+## Research Artifacts
 
 The project hub also includes:
-- **User Persona Journey Map**
+- **User Personas & Journey Map**
 - **Strategic Design Alignment Matrix**
 
-## How it’s deployed
+## About
 
-A GitHub Actions workflow (`.github/workflows/deploy-pages.yml`) builds the prototypes/wireframes and deploys them together as a single GitHub Pages site.
+This repository was created for the LIS 640 Industry-Led Capstone project in collaboration with WiLS for Recollection Wisconsin. It is intended to function as a visual design story, showing how the redesign evolved from early research and user-flow thinking into homepage wireframes, user-type pathway exploration, and the current final design direction.
 
-If you don’t see the latest version yet, refresh after a minute or two while the GitHub Pages workflow finishes running.
+## How It’s Deployed
 
-## Local development (optional)
+A GitHub Actions workflow (`.github/workflows/deploy-pages.yml`) builds the prototypes and wireframes and deploys them together as a single GitHub Pages site.
 
-Each prototype/wireframe has its own local setup. To run one locally:
+If you do not see the latest version immediately, refresh after the GitHub Pages workflow finishes running.
+
+## Local Development (Optional)
+
+Each prototype or wireframe has its own local setup. To run one locally:
 
 ```bash
-cd wireframe-final-v2
+cd final-v1
 npm install
 npm run dev
-
-

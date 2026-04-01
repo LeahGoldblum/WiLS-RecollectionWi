@@ -37,7 +37,7 @@ jobs:
           # Copy hub/landing pages
           cp -R pages/* site/
 
-          # For projects that output to ./build (your existing prototypes/wireframes)
+          # For projects that output to ./build
           build_one () {
             local dir="$1"
             local subpath="$2"
@@ -50,7 +50,7 @@ jobs:
             cp -R "${dir}/build"/* "site/${subpath}/"
           }
 
-          # For Vite projects that output to ./dist (your new contributor pathway)
+          # For Vite projects that output to ./dist
           build_one_vite () {
             local dir="$1"
             local subpath="$2"
@@ -63,7 +63,7 @@ jobs:
             cp -R "${dir}/dist"/* "site/${subpath}/"
           }
 
-          # Existing
+          # Existing build/ folder projects
           build_one tree tree
           build_one interactive interactive
           build_one everyone everyone
@@ -71,8 +71,11 @@ jobs:
           build_one wireframe-intent wireframe-intent
           build_one wireframe-final-v2 wireframe-final-v2
 
-          # NEW: Contributor pathway low-fi (Vite)
+          # Existing and new Vite/dist projects
           build_one_vite contributor-pathway-lowfi contributor-pathway-lowfi
+          build_one_vite educator-path-1 educator-path-1
+          build_one_vite educator-path-2 educator-path-2
+          build_one_vite final-v1 final-v1
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
