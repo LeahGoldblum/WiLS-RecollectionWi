@@ -2,6 +2,10 @@
 
 This repository contains the design process materials created for the LIS 640 Industry-Led Capstone project with WiLS for Recollection Wisconsin. Rather than showing only final outputs, this repository is intended to document the project story from research and user-flow exploration through low-fidelity homepage and pathway wireframes, leading into the current final design direction.
 
+## About
+
+This repository was created for the LIS 640 Industry-Led Capstone project in collaboration with WiLS for Recollection Wisconsin. It is intended to function as a visual design story, showing how the redesign evolved from early research and user-flow thinking into homepage wireframes, user-type pathway exploration, and the current final design direction.
+
 ## View the Project Site
 
 - **Project Hub (Start Page):** https://leahgoldblum.github.io/WiLS-RecollectionWi/
@@ -59,10 +63,6 @@ The project hub also includes:
 - **User Personas & Journey Map**
 - **Strategic Design Alignment Matrix**
 
-## About
-
-This repository was created for the LIS 640 Industry-Led Capstone project in collaboration with WiLS for Recollection Wisconsin. It is intended to function as a visual design story, showing how the redesign evolved from early research and user-flow thinking into homepage wireframes, user-type pathway exploration, and the current final design direction.
-
 ## How It’s Deployed
 
 A GitHub Actions workflow (`.github/workflows/deploy-pages.yml`) builds the prototypes and wireframes and deploys them together as a single GitHub Pages site.
@@ -77,3 +77,6 @@ Each prototype or wireframe has its own local setup. To run one locally:
 cd final-v1
 npm install
 npm run dev
+```
+
+You can follow the same pattern for the other folders as needed.
