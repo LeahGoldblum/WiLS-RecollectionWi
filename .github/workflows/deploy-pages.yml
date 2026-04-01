@@ -76,7 +76,7 @@ jobs:
           build_one_vite educator-path-1 educator-path-1
           build_one_vite educator-path-2 educator-path-2
           build_one_vite final-v1 final-v1
-
+          
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
