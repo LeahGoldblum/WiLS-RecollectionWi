@@ -1,61 +1,47 @@
-**Add your own guidelines here**
-<!--
+# Recollection Wisconsin Wireframe Guidelines
 
-System Guidelines
+## General
 
-Use this file to provide the AI with rules and guidelines you want it to follow.
-This template outlines a few examples of things you can add. You can add your own sections and format it to suit your needs
+- This is a low-fidelity wireframe prototype for LIS 640 capstone. Maintain wireframe style only — no heavy branding, no full visual polish.
+- Monochrome / greyscale palette throughout. Neutral tones (neutral-50 through neutral-900) only.
+- No em dashes anywhere in copy or labels. Use hyphens or parentheses instead.
+- No real backend, email, authentication, or database. All form submissions are simulated.
+- No real DPLA search integration. All results are mock/wireframe stubs.
 
-TIP: More context isn't always better. It can confuse the LLM. Try and add the most important rules you need
+## Audience Paths
 
-# General guidelines
+Three audience paths are implemented and must remain distinct:
+1. **Educators** — /educators and sub-routes. Map feature lives HERE only.
+2. **Genealogists** — /genealogists and sub-routes.
+3. **Contributors / Organizations** — /organizations and sub-routes.
 
-Any general rules you want the AI to follow.
-For example:
+All three paths must be accessible from:
+- Homepage audience cards (HeroSection + Home CTA section)
+- Header navigation dropdown menus
 
-* Only use absolute positioning when necessary. Opt for responsive and well structured layouts that use flexbox and grid by default
-* Refactor code as you go to keep code clean
-* Keep file sizes small and put helper functions and components in their own files.
+## Contributor (Organizations) Flow Rules (Kristen's requirements — non-negotiable)
 
---------------
+- RWDI is NOT a selectable pathway. Only Hosting and Harvesting are pathways.
+- RWDI interest is captured as a checkbox (Step 0 of the wizard), not a route branch.
+- "Every three months" replaces "quarterly" or "~quarterly" everywhere.
+- "Recollection Wisconsin staff member" replaces "WiLS staff member" everywhere.
+- "I'm just getting started digitizing materials" is a distinct goal option from "Get help digitizing."
+- Underrepresented communities helper text: "RW prioritizes these collections; we can discuss more how the digital materials and metadata are handled."
+- CC0 acknowledgement must include a "What is CC0?" link to https://creativecommons.org/public-domain/cc0/
+- Review step includes "Email me a copy of my completed submission" checkbox.
+- Confirmation screen shows "Copy will be sent to: [email]" and a "Download a copy" button (mock).
 
-# Design system guidelines
-Rules for how the AI should make generations look like your company's design system
+## Copy Rules (Partner With Us / OrganizationsHub)
 
-Additionally, if you select a design system to use in the prompt box, you can reference
-your design system's components, tokens, variables and components.
-For example:
+Match the live RW site language exactly:
+- Use "Content Partners" not "contributors" in hub-level copy.
+- Use "Collection Hosting" and "Collection Harvesting" as pathway names (not just "Hosting" / "Harvesting") in card titles.
+- Reference DPLA as "Digital Public Library of America."
+- Keep the "Please note:" callout about institutions vs. individuals.
 
-* Use a base font-size of 14px
-* Date formats should always be in the format “Jun 10”
-* The bottom toolbar should only ever have a maximum of 4 items
-* Never use the floating action button with the bottom toolbar
-* Chips should always come in sets of 3 or more
-* Don't use a dropdown if there are 2 or fewer options
+## Design System
 
-You can also create sub sections and add more specific details
-For example:
-
-
-## Button
-The Button component is a fundamental interactive element in our design system, designed to trigger actions or navigate
-users through the application. It provides visual feedback and clear affordances to enhance user experience.
-
-### Usage
-Buttons should be used for important actions that users need to take, such as form submissions, confirming choices,
-or initiating processes. They communicate interactivity and should have clear, action-oriented labels.
-
-### Variants
-* Primary Button
-  * Purpose : Used for the main action in a section or page
-  * Visual Style : Bold, filled with the primary brand color
-  * Usage : One primary button per section to guide users toward the most important action
-* Secondary Button
-  * Purpose : Used for alternative or supporting actions
-  * Visual Style : Outlined with the primary color, transparent background
-  * Usage : Can appear alongside a primary button for less important actions
-* Tertiary Button
-  * Purpose : Used for the least important actions
-  * Visual Style : Text-only with no border, using primary color
-  * Usage : For actions that should be available but not emphasized
--->
+- Inter for body text, serif/display for headings (font-display class).
+- Generous whitespace. Minimal shadows (only on hover states).
+- Buttons and links must have clear clickability affordances.
+- Wireframe annotations (Annotation component) are acceptable.

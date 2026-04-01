@@ -1,7 +1,7 @@
 
-  # Intent-Driven Homepage Wireframe
+  # Intent-Driven Homepage Wireframe (Copy)
 
-  This is a code bundle for Intent-Driven Homepage Wireframe. The original project is available at https://www.figma.com/design/zeRswSOjwYl9MLIU9YgnAb/Intent-Driven-Homepage-Wireframe.
+  This is a code bundle for Intent-Driven Homepage Wireframe (Copy). The original project is available at https://www.figma.com/design/S5THw4ux9hinC6R7OsLXIg/Intent-Driven-Homepage-Wireframe--Copy-.
 
   ## Running the code
 
