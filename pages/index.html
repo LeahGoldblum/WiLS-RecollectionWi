@@ -3,126 +3,344 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WiLS / Recollection Wisconsin - 640 Industy Led Capstone</title>
+    <title>WiLS / Recollection Wisconsin - LIS 640 Capstone</title>
     <style>
-      :root { --bg: #0b0b10; --card: #151522; --text: #f2f2f7; --muted:#b6b6c5; --link:#8fd3ff; }
-      @media (prefers-color-scheme: light) {
-        :root { --bg:#ffffff; --card:#f4f5f7; --text:#0b0b10; --muted:#4b5563; --link:#005fcc; }
+      :root {
+        --bg: #0b0b10;
+        --card: #151522;
+        --card-2: #1b1b2b;
+        --text: #f2f2f7;
+        --muted: #b6b6c5;
+        --link: #8fd3ff;
+        --accent: #d9b86a;
+        --border: rgba(255, 255, 255, 0.08);
+        --hover: rgba(143, 211, 255, 0.45);
       }
-      body { background: var(--bg); color: var(--text); font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 48px 20px; }
-      .wrap { max-width: 980px; margin: 0 auto; }
-      h1 { font-size: 28px; margin: 0 0 10px; }
-      h2 { font-size: 18px; margin: 28px 0 8px; }
-      p { color: var(--muted); margin: 0 0 18px; }
-      .grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); margin-top: 18px; }
-      a.card { display: block; background: var(--card); border-radius: 16px; padding: 18px 18px 16px; text-decoration: none; color: var(--text); border: 1px solid rgba(255,255,255,0.08); }
-      a.card:hover { border-color: rgba(143,211,255,0.6); }
-      .title { font-weight: 700; margin-bottom: 6px; }
-      .desc { color: var(--muted); font-size: 14px; }
-      .foot { margin-top: 28px; font-size: 12px; color: var(--muted); }
-      .foot a { color: var(--link); }
+
+      @media (prefers-color-scheme: light) {
+        :root {
+          --bg: #ffffff;
+          --card: #f6f7f9;
+          --card-2: #eef2f7;
+          --text: #0b0b10;
+          --muted: #4b5563;
+          --link: #005fcc;
+          --accent: #8a6412;
+          --border: rgba(0, 0, 0, 0.08);
+          --hover: rgba(0, 95, 204, 0.28);
+        }
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        background: linear-gradient(180deg, var(--bg) 0%, var(--bg) 100%);
+        color: var(--text);
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+        margin: 0;
+        padding: 48px 20px 56px;
+      }
+
+      .wrap {
+        max-width: 1040px;
+        margin: 0 auto;
+      }
+
+      .hero {
+        margin-bottom: 34px;
+        padding: 28px;
+        border-radius: 24px;
+        background: linear-gradient(135deg, var(--card) 0%, var(--card-2) 100%);
+        border: 1px solid var(--border);
+      }
+
+      .eyebrow {
+        display: inline-block;
+        font-size: 12px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--accent);
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+
+      h1 {
+        font-size: 32px;
+        line-height: 1.15;
+        margin: 0 0 12px;
+      }
+
+      .intro {
+        color: var(--muted);
+        font-size: 16px;
+        line-height: 1.65;
+        margin: 0;
+        max-width: 820px;
+      }
+
+      .timeline {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 10px;
+        margin-top: 22px;
+      }
+
+      .step {
+        background: rgba(255,255,255,0.03);
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        padding: 12px 14px;
+        font-size: 13px;
+        color: var(--muted);
+      }
+
+      .step strong {
+        display: block;
+        color: var(--text);
+        font-size: 13px;
+        margin-bottom: 4px;
+      }
+
+      section {
+        margin-top: 34px;
+      }
+
+      .section-label {
+        font-size: 12px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--accent);
+        font-weight: 700;
+        margin-bottom: 6px;
+      }
+
+      h2 {
+        font-size: 22px;
+        margin: 0 0 8px;
+      }
+
+      p {
+        color: var(--muted);
+        margin: 0 0 18px;
+        line-height: 1.65;
+      }
+
+      .grid {
+        display: grid;
+        gap: 16px;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        margin-top: 18px;
+      }
+
+      a.card {
+        display: block;
+        background: var(--card);
+        border-radius: 18px;
+        padding: 18px 18px 16px;
+        text-decoration: none;
+        color: var(--text);
+        border: 1px solid var(--border);
+        transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+      }
+
+      a.card:hover {
+        transform: translateY(-2px);
+        border-color: var(--hover);
+        box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+      }
+
+      .title {
+        font-weight: 700;
+        margin-bottom: 8px;
+        font-size: 16px;
+      }
+
+      .desc {
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.55;
+      }
+
+      .highlight {
+        border-color: rgba(217, 184, 106, 0.35);
+      }
+
+      .foot {
+        margin-top: 34px;
+        font-size: 12px;
+        color: var(--muted);
+      }
+
+      .foot a {
+        color: var(--link);
+      }
     </style>
   </head>
   <body>
     <div class="wrap">
-      <h1>WiLS / Recollection Wisconsin – Capstone Project</h1>
+      <div class="hero">
+        <div class="eyebrow">LIS 640 Capstone</div>
+        <h1>WiLS / Recollection Wisconsin – UX Process, Prototypes & Design Evolution</h1>
+        <p class="intro">
+          This project hub is designed to tell the story of the Recollection Wisconsin redesign process from start to finish.
+          It begins with research and early user-flow thinking, moves through homepage and pathway wireframes, and leads into
+          the current final design direction. Rather than showing only final deliverables, this page documents how the work evolved.
+        </p>
 
-      <!-- Research artifacts -->
-      <h2>Research Artifacts</h2>
-      <p>Key research artifacts referenced during our discussion.</p>
-
-      <div class="grid">
-        <a
-          class="card"
-          href="./assets/user-persona-and-journey.pdf"
-          target="_blank"
-          rel="noopener"
-        >
-          <div class="title">User Personas &amp; Journey Map (PDF)</div>
-          <div class="desc">Open the PDF in a new tab.</div>
-        </a>
-        <a
-          class="card"
-          href="./assets/strategic-design-alignment-matrix.pdf"
-          target="_blank"
-          rel="noopener"
-        >
-          <div class="title">Strategic Design Alignment Matrix (PDF)</div>
-          <div class="desc">Best-in-class UX patterns mapped to redesign decisions.</div>
-        </a>
-      </div>
-
-      <!-- User flows -->
-      <h2>User Flows</h2>
-      <p>Select a User Flow below. Each link opens a separate build.</p>
-
-      <div class="grid">
-        <a class="card" href="./tree/">
-          <div class="title">Tree User Flow</div>
-          <div class="desc">A tree-style flow for exploring paths and decisions.</div>
-        </a>
-        <a class="card" href="./interactive/">
-          <div class="title">Interactive User Flow</div>
-          <div class="desc">Interactive flow prototype for click-through exploration.</div>
-        </a>
-        <a class="card" href="./everyone/">
-          <div class="title">User Flow for Everyone</div>
-          <div class="desc">A version designed for broader audiences / stakeholders.</div>
-        </a>
-      </div>
-
-      <!-- Homepage wireframes -->
-      <h2>Wireframes</h2>
-      <p>Homepage wireframes, including the final selected V2 direction.</p>
-
-      <div class="grid">
-        <a class="card" href="./wireframe-final-v2/">
-          <div class="title">Final Low-Fidelity Homepage Wireframe (V2)</div>
-          <div class="desc">Intent-driven final direction selected for next-step development.</div>
-        </a>
-        <a class="card" href="./wireframe-lowfi/">
-          <div class="title">Low-Fidelity Homepage Wireframe (V1)</div>
-          <div class="desc">Short-scroll version (earlier prototype).</div>
-        </a>
-        <a class="card" href="./wireframe-intent/">
-          <div class="title">Intent-Driven Homepage Wireframe (V1)</div>
-          <div class="desc">Long-scroll version (earlier prototype).</div>
-        </a>
-      </div>
-
-      <!-- NEW: Lo-fi wireframes by user type -->
-      <h2>Lo-Fi Wireframes by User Type</h2>
-      <p>Lo-fi pathway wireframes built out for specific user types.</p>
-
-      <div class="grid">
-        <a class="card" href="./contributor-pathway-lowfi/">
-          <div class="title">Contributor Pathway (Lo-Fi)</div>
-          <div class="desc">
-            Built-out contributor pathway in low-fi. Click through the two contributor pathway screens to follow it.
-            <br /><br />
-            <em>Coming soon:</em> Teacher pathway + Genealogist pathway.
+        <div class="timeline">
+          <div class="step">
+            <strong>Step 1</strong>
+            Research artifacts
           </div>
-        </a>
+          <div class="step">
+            <strong>Step 2</strong>
+            User flow exploration
+          </div>
+          <div class="step">
+            <strong>Step 3</strong>
+            Homepage wireframes
+          </div>
+          <div class="step">
+            <strong>Step 4</strong>
+            User-type pathway wireframes
+          </div>
+          <div class="step">
+            <strong>Step 5</strong>
+            Final design direction
+          </div>
+        </div>
       </div>
 
-      <!-- What's Next / Weekly Progress -->
-      <h2>What’s Next?</h2>
-      <div class="grid">
-        <a
-          class="card"
-          href="https://test12334443.my.canva.site/recollection-wisconsin-wils-weekly-progress-snapshot"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <div class="title">Weekly Progress Mini-Deck (Live Document)</div>
-          <div class="desc">
-            Click to view the current version. This link stays the same as I make updates.
-          </div>
-        </a>
-      </div>
+      <section>
+        <div class="section-label">Step 1</div>
+        <h2>Research Artifacts</h2>
+        <p>Key research and strategy materials that informed the redesign direction and helped translate stakeholder goals into design decisions.</p>
+
+        <div class="grid">
+          <a
+            class="card"
+            href="./assets/user-persona-and-journey.pdf"
+            target="_blank"
+            rel="noopener"
+          >
+            <div class="title">User Personas &amp; Journey Map (PDF)</div>
+            <div class="desc">Primary personas and journey insights used to ground the redesign in real user needs and motivations.</div>
+          </a>
+
+          <a
+            class="card"
+            href="./assets/strategic-design-alignment-matrix.pdf"
+            target="_blank"
+            rel="noopener"
+          >
+            <div class="title">Strategic Design Alignment Matrix (PDF)</div>
+            <div class="desc">Best-in-class UX patterns mapped to redesign opportunities and strategic recommendations.</div>
+          </a>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-label">Step 2</div>
+        <h2>User Flows</h2>
+        <p>These flow explorations helped define site pathways, choices, and interaction patterns before moving into wireframing.</p>
+
+        <div class="grid">
+          <a class="card" href="./tree/">
+            <div class="title">Tree User Flow</div>
+            <div class="desc">A tree-style flow for exploring key paths, branching decisions, and overall site logic.</div>
+          </a>
+
+          <a class="card" href="./interactive/">
+            <div class="title">Interactive User Flow</div>
+            <div class="desc">A click-through version for more dynamic exploration of structure and movement through the site.</div>
+          </a>
+
+          <a class="card" href="./everyone/">
+            <div class="title">User Flow for Everyone</div>
+            <div class="desc">A broader audience version intended to make the flow easier for stakeholders to review and understand.</div>
+          </a>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-label">Step 3</div>
+        <h2>Homepage Wireframes</h2>
+        <p>These homepage wireframes show how the landing-page direction evolved from early low-fidelity exploration into a more refined structure shaped by feedback.</p>
+
+        <div class="grid">
+          <a class="card" href="./wireframe-lowfi/">
+            <div class="title">Low-Fidelity Homepage Wireframe (V1)</div>
+            <div class="desc">An earlier homepage exploration using a shorter-scroll structure.</div>
+          </a>
+
+          <a class="card" href="./wireframe-intent/">
+            <div class="title">Intent-Driven Homepage Wireframe (V1)</div>
+            <div class="desc">An alternate early homepage direction with a longer-scroll, intent-driven approach.</div>
+          </a>
+
+          <a class="card" href="./wireframe-final-v2/">
+            <div class="title">Final Low-Fidelity Homepage Wireframe (V2)</div>
+            <div class="desc">The refined low-fidelity homepage direction selected as the strongest foundation for next-step development.</div>
+          </a>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-label">Step 4</div>
+        <h2>Lo-Fi Wireframes by User Type</h2>
+        <p>These pathway wireframes build on the homepage concepts by moving into more audience-specific journeys. This section shows how the project progressed from broad structure into user-type exploration.</p>
+
+        <div class="grid">
+          <a class="card" href="./contributor-pathway-lowfi/">
+            <div class="title">Contributor Pathway (Lo-Fi)</div>
+            <div class="desc">Built-out contributor pathway in low fidelity. Click through the contributor screens to follow that user journey.</div>
+          </a>
+
+          <a class="card" href="./educator-path-1/">
+            <div class="title">Educator Path 1</div>
+            <div class="desc">First low-fidelity educator pathway exploration focused on how educators might enter, navigate, and locate relevant teaching-oriented resources.</div>
+          </a>
+
+          <a class="card" href="./educator-path-2/">
+            <div class="title">Educator Path 2</div>
+            <div class="desc">Second low-fidelity educator pathway exploration showing an alternate direction for comparison, refinement, and stakeholder review.</div>
+          </a>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-label">Step 5</div>
+        <h2>Final Design Direction</h2>
+        <p>This section reflects the project’s current visual direction. Unlike the low-fidelity work above, this version begins to show the look, feel, and overall experience of the proposed redesign more fully.</p>
+
+        <div class="grid">
+          <a class="card highlight" href="./final-v1/">
+            <div class="title">Final Version 1</div>
+            <div class="desc">The current review version following the latest stakeholder discussion. This is the primary version for feedback before moving into the next round of refinement.</div>
+          </a>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-label">What’s Next</div>
+        <h2>Weekly Progress</h2>
+        <p>This live document captures ongoing progress and presentation-ready updates as the project moves toward completion.</p>
+
+        <div class="grid">
+          <a
+            class="card"
+            href="https://test12334443.my.canva.site/recollection-wisconsin-wils-weekly-progress-snapshot"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div class="title">Weekly Progress Mini-Deck (Live Document)</div>
+            <div class="desc">Open the current working version. This link stays the same as updates are made.</div>
+          </a>
+        </div>
+      </section>
 
       <div class="foot">
-        Please email me at lgoldblum@wisc.edu for questions.
+        Please email me at <a href="mailto:lgoldblum@wisc.edu">lgoldblum@wisc.edu</a> with any questions.
       </div>
     </div>
   </body>
