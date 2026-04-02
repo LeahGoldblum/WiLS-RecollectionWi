@@ -85,7 +85,7 @@ jobs:
           # These should be copied from checked-in dist
           copy_dist educator-path-1 educator-path-1
           copy_dist educator-path-2 educator-path-2
-          copy_dist final-v1 final-v1
+          build_one_vite final-v1 final-v1
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
