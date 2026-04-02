@@ -21,6 +21,25 @@ import { EducatorResourceSetDetail } from './pages/EducatorResourceSetDetail';
 import { ExploreLanding } from './pages/ExploreLanding';
 import { About } from './pages/About';
 
+function resolveRouterBasename() {
+  const configuredBase = import.meta.env.BASE_URL;
+
+  if (configuredBase && configuredBase !== '/' && configuredBase !== './') {
+    return configuredBase.replace(/\/$/, '');
+  }
+
+  if (typeof window !== 'undefined') {
+    const appSegment = '/final-v1';
+    const segmentIndex = window.location.pathname.indexOf(appSegment);
+
+    if (segmentIndex >= 0) {
+      return window.location.pathname.slice(0, segmentIndex + appSegment.length);
+    }
+  }
+
+  return undefined;
+}
+
 export const router = createBrowserRouter([
   {
     path: '/',
@@ -77,4 +96,6 @@ export const router = createBrowserRouter([
       { path: 'educators/resource-set/:id', Component: EducatorResourceSetDetail },
     ],
   },
-]);
+], {
+  basename: resolveRouterBasename(),
+});
