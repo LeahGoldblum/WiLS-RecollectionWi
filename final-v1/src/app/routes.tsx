@@ -21,6 +21,20 @@ import { EducatorResourceSetDetail } from './pages/EducatorResourceSetDetail';
 import { ExploreLanding } from './pages/ExploreLanding';
 import { About } from './pages/About';
 
+const routerBasename = (() => {
+  const envBase = import.meta.env.BASE_URL;
+  if (envBase && envBase !== './') return envBase;
+
+  if (typeof window !== 'undefined') {
+    const marker = '/final-v1/';
+    const path = window.location.pathname;
+    const idx = path.indexOf(marker);
+    if (idx >= 0) return path.slice(0, idx + marker.length);
+  }
+
+  return '/';
+})();
+
 export const router = createBrowserRouter([
   {
     path: '/',
@@ -77,4 +91,4 @@ export const router = createBrowserRouter([
       { path: 'educators/resource-set/:id', Component: EducatorResourceSetDetail },
     ],
   },
-]);
+], { basename: routerBasename });
