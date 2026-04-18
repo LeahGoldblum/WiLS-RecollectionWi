@@ -87,6 +87,9 @@ jobs:
           copy_dist educator-path-2 educator-path-2
           build_one_vite final-v1 final-v1
 
+          # V2 editorial redesign (pre-built)
+          mkdir -p site/final-v2
+          cp -R final-v2/* site/final-v2/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
