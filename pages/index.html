@@ -23,6 +23,12 @@
         --sage: #5a7d5e;
         --sage-light: #e8f0e9;
 
+        --warm: #b85c38;
+        --warm-light: #f7e5dc;
+
+        --teal: #2c6e7f;
+        --teal-light: #dfedf0;
+
         --radius: 18px;
         --shadow: 0 10px 30px rgba(30, 58, 95, 0.08);
         --max: 1120px;
@@ -39,10 +45,7 @@
         line-height: 1.6;
       }
 
-      a {
-        color: inherit;
-        text-decoration: none;
-      }
+      a { color: inherit; text-decoration: none; }
 
       .wrap {
         max-width: var(--max);
@@ -96,9 +99,7 @@
         border-color: #d6dde8;
       }
 
-      .hero {
-        padding: 48px 0 26px;
-      }
+      .hero { padding: 48px 0 26px; }
 
       .eyebrow {
         display: inline-block;
@@ -156,9 +157,16 @@
         letter-spacing: 0.05em;
       }
 
-      section {
-        padding-top: 34px;
+      .story-step.highlight {
+        background: linear-gradient(135deg, var(--warm-light), #fff);
+        border-color: var(--warm);
       }
+
+      .story-step.highlight strong {
+        color: var(--warm);
+      }
+
+      section { padding-top: 34px; }
 
       .section-tag {
         display: inline-block;
@@ -218,10 +226,17 @@
       .accent-blue { border-top: 4px solid var(--primary); }
       .accent-gold { border-top: 4px solid var(--gold); }
       .accent-sage { border-top: 4px solid var(--sage); }
+      .accent-warm { border-top: 4px solid var(--warm); }
+      .accent-teal { border-top: 4px solid var(--teal); }
 
       .featured {
         background: linear-gradient(135deg, #ffffff, var(--primary-light));
         border-color: #cad7e8;
+      }
+
+      .featured-warm {
+        background: linear-gradient(135deg, #ffffff, var(--warm-light));
+        border-color: var(--warm);
       }
 
       .about-box {
@@ -245,12 +260,8 @@
       }
 
       @media (max-width: 720px) {
-        .topbar-inner {
-          align-items: flex-start;
-        }
-        .menu {
-          width: 100%;
-        }
+        .topbar-inner { align-items: flex-start; }
+        .menu { width: 100%; }
       }
     </style>
   </head>
@@ -265,6 +276,8 @@
           <a href="#homepage">Homepage</a>
           <a href="#pathways">Pathways</a>
           <a href="#final">Final</a>
+          <a href="#v2">V2</a>
+          <a href="#complete">Complete</a>
         </nav>
       </div>
     </div>
@@ -276,7 +289,7 @@
         <p>
           This project hub is designed to tell the story of the Recollection Wisconsin redesign from start to finish.
           It begins with research and user-flow exploration, moves through homepage and user-type wireframes, and leads
-          into the current final design direction.
+          into the final editorial redesign and completed project.
         </p>
         <p>
           Rather than showing only finished deliverables, this page documents the evolution of the design process and how
@@ -303,7 +316,15 @@
             </div>
             <div class="story-step">
               <strong>Step 5</strong>
-              Final Version 1 shows the current visual direction for review.
+              Final Version 1 shows the approved visual direction.
+            </div>
+            <div class="story-step">
+              <strong>Step 6</strong>
+              V2 Editorial Redesign layered the design system and accessibility.
+            </div>
+            <div class="story-step highlight">
+              <strong>Step 7</strong>
+              Final complete version ready for client handoff.
             </div>
           </div>
         </div>
@@ -315,7 +336,7 @@
         <div class="about-box">
           <p>
             This repository documents the LIS 640 Industry-Led Capstone redesign process completed in collaboration with WiLS for Recollection Wisconsin.
-            It is intended to show both the project outcomes and the design process behind them, from research and user flows to wireframes and the current final design direction.
+            It is intended to show both the project outcomes and the design process behind them, from research and user flows to wireframes and the final editorial redesign.
           </p>
         </div>
       </section>
@@ -419,13 +440,53 @@
         <div class="section-tag">Step 5</div>
         <h2>Final Design Direction</h2>
         <p class="section-intro">
-          Unlike the low-fidelity work above, this version begins to show the look, feel, and overall experience of the proposed redesign more fully.
+          Unlike the low-fidelity work above, this version begins to show the look, feel, and overall experience of the proposed redesign more fully. Reviewed and approved by WiLS stakeholders.
         </p>
 
         <div class="grid">
           <a class="card featured accent-blue" href="./final-v1/">
             <div class="card-title">Final Version 1</div>
-            <div class="card-desc">The current review version following the latest stakeholder discussion and the primary version for feedback at this stage.</div>
+            <div class="card-desc">The approved review version following stakeholder discussion. All user pathways are clickable end-to-end.</div>
+          </a>
+        </div>
+      </section>
+
+      <section id="v2">
+        <div class="section-tag">Step 6</div>
+        <h2>V2 Editorial Redesign</h2>
+        <p class="section-intro">
+          Building on the approved V1, the editorial redesign introduces a four-color audience wayfinding system, sharp editorial typography, hover-lift interaction patterns, and WCAG 2.1 Level AA accessibility compliance.
+        </p>
+
+        <div class="grid">
+          <a class="card featured accent-warm" href="./final-v2/">
+            <div class="card-title">V2 Editorial Redesign</div>
+            <div class="card-desc">The editorial design system applied to all 20 pages. Dark header and footer, audience color pathways, responsive from 320px to 4K.</div>
+          </a>
+
+          <a class="card accent-teal" href="./final-v2/style-guide">
+            <div class="card-title">Editorial Style Guide</div>
+            <div class="card-desc">In-site design system documentation covering the color palette, typography, components, interaction rules, and accessibility features.</div>
+          </a>
+
+          <a class="card accent-sage" href="./final-v1/">
+            <div class="card-title">V1 for Comparison</div>
+            <div class="card-desc">Compare with V1 side-by-side to see how the editorial system transformed the same content and interactions.</div>
+          </a>
+        </div>
+      </section>
+
+      <section id="complete">
+        <div class="section-tag">Step 7 — Final Deliverable</div>
+        <h2>Completed Project</h2>
+        <p class="section-intro">
+          The final, complete version of the Recollection Wisconsin redesign. This is the capstone deliverable ready for client handoff to WiLS.
+        </p>
+
+        <div class="grid">
+          <a class="card featured-warm accent-warm" href="./final/">
+            <div class="card-title">Final Complete Version</div>
+            <div class="card-desc">The completed Recollection Wisconsin redesign with all stakeholder feedback applied, full accessibility, and responsive design. Ready for handoff.</div>
           </a>
         </div>
       </section>
@@ -449,8 +510,6 @@
           </a>
         </div>
       </section>
-
-      
 
       <div class="footer">
         Please email me at <a href="mailto:lgoldblum@wisc.edu">lgoldblum@wisc.edu</a> with any questions.
