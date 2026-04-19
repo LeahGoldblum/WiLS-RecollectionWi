@@ -1,82 +1,88 @@
-# WiLS / Recollection Wisconsin — UX Process, Prototypes & Design Evolution
+# Recollection Wisconsin — LIS 640 Capstone Redesign
 
-This repository contains the design process materials created for the LIS 640 Industry-Led Capstone project with WiLS for Recollection Wisconsin. Rather than showing only final outputs, this repository is intended to document the project story from research and user-flow exploration through low-fidelity homepage and pathway wireframes, leading into the current final design direction.
+**Leah Goldblum** · M.S. Information Science · UW-Madison iSchool · Spring 2026
 
-## About
+Industry Partners: **Kristen Whitson** (Program Manager) & **Andi Coffin** (Communications & Consortia Manager) · [WiLS](https://www.wils.org)
 
-This repository was created for the LIS 640 Industry-Led Capstone project in collaboration with WiLS for Recollection Wisconsin. It is intended to function as a visual design story, showing how the redesign evolved from early research and user-flow thinking into homepage wireframes, user-type pathway exploration, and the current final design direction.
+Instructor: Bradley Bryant
 
-## View the Project Site
+---
 
-- **Project Hub (Start Page):** https://leahgoldblum.github.io/WiLS-RecollectionWi/
-- **Tree User Flow:** https://leahgoldblum.github.io/WiLS-RecollectionWi/tree/
-- **Interactive User Flow:** https://leahgoldblum.github.io/WiLS-RecollectionWi/interactive/
-- **User Flow for Everyone:** https://leahgoldblum.github.io/WiLS-RecollectionWi/everyone/
+## Live Site
 
-## Homepage Wireframes
+**Process Portfolio:** [leahgoldblum.github.io/WiLS-RecollectionWi](https://leahgoldblum.github.io/WiLS-RecollectionWi/)
 
-- **Low-Fidelity Homepage Wireframe (V1):** https://leahgoldblum.github.io/WiLS-RecollectionWi/wireframe-lowfi/
-- **Intent-Driven Homepage Wireframe (V1):** https://leahgoldblum.github.io/WiLS-RecollectionWi/wireframe-intent/
-- **Final Low-Fidelity Homepage Wireframe (V2):** https://leahgoldblum.github.io/WiLS-RecollectionWi/wireframe-final-v2/
+**Final Complete Version:** [leahgoldblum.github.io/WiLS-RecollectionWi/final](https://leahgoldblum.github.io/WiLS-RecollectionWi/final/)
 
-## Lo-Fi Wireframes by User Type
+**V2 Editorial Redesign:** [leahgoldblum.github.io/WiLS-RecollectionWi/final-v2](https://leahgoldblum.github.io/WiLS-RecollectionWi/final-v2/)
 
-- **Contributor Pathway (Lo-Fi):** https://leahgoldblum.github.io/WiLS-RecollectionWi/contributor-pathway-lowfi/  
-  *Built-out contributor pathway in low fidelity. Click through the contributor screens to follow the user journey.*
+**V1 Prototype:** [leahgoldblum.github.io/WiLS-RecollectionWi/final-v1](https://leahgoldblum.github.io/WiLS-RecollectionWi/final-v1/)
 
-- **Educator Path 1:** https://leahgoldblum.github.io/WiLS-RecollectionWi/educator-path-1/  
-  *First educator-focused low-fidelity pathway exploration.*
+---
 
-- **Educator Path 2:** https://leahgoldblum.github.io/WiLS-RecollectionWi/educator-path-2/  
-  *Second educator-focused low-fidelity pathway exploration for comparison and refinement.*
+## About This Project
 
-## Final Design Direction
+Recollection Wisconsin is a collaborative digital history program coordinated by WiLS (Wisconsin Library Services) that provides access to more than 600,000 historical items from over 200 Wisconsin libraries, museums, archives, and historical societies.
 
-- **Final Version 1:** https://leahgoldblum.github.io/WiLS-RecollectionWi/final-v1/  
-  *Current visual design direction following the latest stakeholder discussion and the main version for feedback at this stage.*
+This capstone project redesigned the Recollection Wisconsin website using an editorial design approach, introducing audience-specific wayfinding for four distinct user groups — educators, genealogists, cultural heritage partners, and the general public.
 
-## What’s in This Repo
+The process portfolio documents the full design journey from research artifacts through user flows, wireframes, the editorial redesign, and the final completed project.
 
-- `/pages/` – Landing page linking to research artifacts, user flows, wireframes, and the current final design direction
-- `/tree/` – Tree User Flow prototype
-- `/interactive/` – Interactive User Flow prototype
-- `/everyone/` – User Flow for Everyone prototype
-- `/wireframe-lowfi/` – Initial low-fidelity homepage wireframe
-- `/wireframe-intent/` – Intent-driven homepage wireframe (V1)
-- `/wireframe-final-v2/` – Refined low-fidelity homepage wireframe (V2)
-- `/contributor-pathway-lowfi/` – Low-fidelity contributor pathway
-- `/educator-path-1/` – First educator low-fidelity pathway
-- `/educator-path-2/` – Second educator low-fidelity pathway
-- `/final-v1/` – Current final design direction for stakeholder review
+---
 
-## Current Review Focus
+## Design Process (Steps 1–7)
 
-The primary review item at this stage is:
+| Step | Phase | Description |
+|------|-------|-------------|
+| 1 | Research | User personas, journey maps, and a strategic design alignment matrix |
+| 2 | User Flows | Tree flows, interactive prototypes, and stakeholder-facing flow diagrams |
+| 3 | Homepage Wireframes | Low-fidelity to refined homepage direction through iterative feedback |
+| 4 | Pathway Wireframes | Audience-specific journeys for contributors, educators, and researchers |
+| 5 | V1 Final | Full prototype with all pathways clickable end-to-end, reviewed with WiLS |
+| 6 | V2 Editorial Redesign | Editorial design system, WCAG 2.1 AA accessibility, responsive design |
+| 7 | **Final Complete** | All stakeholder feedback applied, ready for client handoff |
 
-✅ **Final Version 1**
+---
 
-This version reflects the current visual direction following the latest stakeholder discussion and is the main version for feedback before the next round of refinement.
+## Final Complete Version — What's Inside
 
-## Research Artifacts
+The final version includes everything from V1 and V2, with all stakeholder feedback applied:
 
-The project hub also includes:
-- **User Personas & Journey Map**
-- **Strategic Design Alignment Matrix**
+- **Four-color audience wayfinding** — Sage Green (Educators), Archival Blue (Genealogists), Rustic Orange (Partners), Deep Teal (About/Explore)
+- **20 editorial-style pages** with shared component library
+- **Dark editorial header + footer** with grain texture, gold accents, partner institution logos
+- **WCAG 2.1 Level AA + partial AAA** — skip-to-content, focus rings, prefers-reduced-motion, touch targets, ARIA-labeled SVG maps
+- **Fully responsive** — 320px phones through 4K desktop across five breakpoints
+- **UX notes toggle** — click "Show UX notes" in the bottom-right corner to reveal design annotations
+- **All interactive features** — 8-step partner intake wizard, 3-step Quick Find, map explorers, search forms
 
-## How It’s Deployed
+---
 
-A GitHub Actions workflow (`.github/workflows/deploy-pages.yml`) builds the prototypes and wireframes and deploys them together as a single GitHub Pages site.
+## Tech Stack
 
-If you do not see the latest version immediately, refresh after the GitHub Pages workflow finishes running.
+- React 18 with TypeScript
+- Vite 5 (dev server + production build)
+- Tailwind CSS 3 with custom CSS properties
+- React Router v6 with scroll-to-top behavior
+- Lucide React for iconography
+- GitHub Pages for deployment
 
-## Local Development (Optional)
+---
 
-Each prototype or wireframe has its own local setup. To run one locally:
+## Deliverables
 
-```bash
-cd final-v1
-npm install
-npm run dev
-```
+- Runnable React/TypeScript/Vite prototype (20 pages)
+- Printable PDF style guide for client handoff
+- In-site design system documentation (`/style-guide`)
+- Accessibility handoff checklist
+- Design rationale portfolio document
+- Final Project Report (capstone academic paper)
+- Final Presentation (15-minute in-person demo)
 
-You can follow the same pattern for the other folders as needed.
+---
+
+## Acknowledgments
+
+Built in collaboration with **Kristen Whitson** and **Andi Coffin** at **Wisconsin Library Services (WiLS)**.
+
+*LIS 640 Industry-Directed Product Development · UW-Madison iSchool · Spring 2026*
