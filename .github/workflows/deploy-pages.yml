@@ -90,11 +90,9 @@ jobs:
           # V2 editorial redesign (pre-built)
           mkdir -p site/final-v2
           cp -R final-v2/* site/final-v2/
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: site
-
+        # Final complete version
+          mkdir -p site/final
+          cp -R final/* site/final/
   deploy:
     needs: build
     runs-on: ubuntu-latest
